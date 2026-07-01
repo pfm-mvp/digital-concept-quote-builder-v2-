@@ -1,0 +1,275 @@
+{
+  "source": "pfm_digital_concept_quote_builder_v2",
+  "version": "2.0.0-mvp",
+  "created_at": "2026-07-01T12:40:45.323627+00:00",
+  "environment": "mock_only",
+  "not_sent_to_customer": true,
+  "not_written_to_odoo": true,
+  "human_review_required": true,
+  "intake": {
+    "company_name": "Example Retailer",
+    "contact_name": "Jane Doe",
+    "contact_email": "jane@example.com",
+    "country": "Netherlands",
+    "salesperson": "Christiaan van Rooijen",
+    "segment": "Fashion Retail",
+    "stores": 50,
+    "current_measurement": "Basic traffic counter",
+    "customer_type": "Retail Chain"
+  },
+  "selected_needs": [
+    "baseline_missing",
+    "visitors_not_buying"
+  ],
+  "components": {
+    "components": [
+      {
+        "component_key": "entrance_performance",
+        "label": "Entrance Performance Layer",
+        "units": 50,
+        "scope": 50,
+        "capex_total": 75000,
+        "monthly_total": 1050,
+        "one_off_total": 0,
+        "tco_total": 112800,
+        "pricing_status": "demo_assumption",
+        "privacy_review_required": false
+      }
+    ],
+    "totals": {
+      "capex_total": 75000,
+      "monthly_total": 1050,
+      "one_off_total": 0,
+      "tco_total": 112800
+    }
+  },
+  "route": {
+    "route_key": "essential",
+    "route": {
+      "name": "Essential",
+      "headline": "Measure the basics reliably",
+      "description": "For retailers that first need a trusted baseline for store traffic and conversion potential.",
+      "includes": [
+        "Advantage Portal",
+        "Data management",
+        "Footfall",
+        "Portfolio-wide report",
+        "Sensor management",
+        "Remote support",
+        "Conversion rate"
+      ]
+    },
+    "reasoning": [
+      {
+        "need_id": "baseline_missing",
+        "need": "We do not have a trusted performance baseline",
+        "route_weight": "essential"
+      },
+      {
+        "need_id": "visitors_not_buying",
+        "need": "We have visitors, but not enough buyers",
+        "route_weight": "essential"
+      }
+    ]
+  },
+  "roi": {
+    "assumptions": {
+      "stores": 50,
+      "weekly_footfall_per_store": 8400,
+      "conversion_rate_pct": 18,
+      "average_ticket_value": 32,
+      "gross_margin_pct": 60,
+      "footfall_uplift_pct": 0,
+      "conversion_uplift_pp": 1,
+      "atv_uplift_pct": 0,
+      "open_days_per_week": 6,
+      "contract_years": 3,
+      "realisation_scenario": "Realistic base",
+      "saturday_share_pct": 18.0,
+      "saturday_boost_pct": 0.0
+    },
+    "baseline_revenue_year_total": 125798400.0,
+    "scenario_revenue_year_total": 132787200.0,
+    "theoretical_uplift_year_total": 6988800.0,
+    "theoretical_extra_profit_year_total": 4193280.0,
+    "realisation_factor": 0.25,
+    "realistic_extra_profit_year_total": 1048320.0,
+    "capex_total": 75000.0,
+    "monthly_service_total": 1050.0,
+    "one_off_total": 0.0,
+    "tco_total": 112800.0,
+    "net_value_over_horizon": 3032160.0,
+    "roi_pct_over_horizon": 2688.1,
+    "payback_months": 0.9,
+    "notes": [
+      "Indicative decision-support calculation only.",
+      "Conversion uplift is modelled as percentage points.",
+      "Human review required before external use."
+    ]
+  },
+  "concept_quote_preview": {
+    "company_name": "Example Retailer",
+    "contact_name": "Jane Doe",
+    "contact_email": "jane@example.com",
+    "country": "Netherlands",
+    "customer_type": "Retail Chain",
+    "stores": 50,
+    "recommended_route": "Essential",
+    "capex_total": 75000.0,
+    "monthly_service_total": 1050.0,
+    "tco_total": 112800.0,
+    "realistic_extra_profit_year_total": 1048320.0,
+    "payback_months": 0.9,
+    "roi_pct_over_horizon": 2688.1
+  },
+  "mock_odoo_payload": {
+    "environment": "mock_only",
+    "action": "preview_concept_quote_payload",
+    "do_not_write_to_production_odoo": true,
+    "operating_unit": {
+      "mock_id": "OU_SHOPS_TEST",
+      "label": "Shops"
+    },
+    "opportunity_type": {
+      "mock_id": "OPP_CONCEPT_TEST"
+    },
+    "quote_template_key": "MOCK_TEMPLATE_RETAIL_ESSENTIAL",
+    "salesperson_name": "Christiaan van Rooijen",
+    "customer": {
+      "company_name": "Example Retailer",
+      "contact_name": "Jane Doe",
+      "contact_email": "jane@example.com",
+      "country": "Netherlands"
+    },
+    "quote_lines_preview": [
+      {
+        "component_key": "entrance_performance",
+        "label": "Entrance Performance Layer",
+        "units": 50,
+        "scope": 50,
+        "capex_total": 75000,
+        "monthly_total": 1050,
+        "one_off_total": 0,
+        "tco_total": 112800,
+        "pricing_status": "demo_assumption",
+        "privacy_review_required": false
+      }
+    ],
+    "commercial_totals": {
+      "capex_total": 75000,
+      "monthly_total": 1050,
+      "one_off_total": 0,
+      "tco_total": 112800
+    },
+    "human_review_required": true
+  },
+  "mock_n8n_payload": {
+    "environment": "mock_only",
+    "workflow_intent": "concept_quote_review",
+    "do_not_trigger_live_workflow": true,
+    "source": "pfm_digital_concept_quote_builder_v2",
+    "created_at": "2026-07-01T12:40:45.323627+00:00",
+    "selected_needs": [
+      "baseline_missing",
+      "visitors_not_buying"
+    ],
+    "route": {
+      "route_key": "essential",
+      "route": {
+        "name": "Essential",
+        "headline": "Measure the basics reliably",
+        "description": "For retailers that first need a trusted baseline for store traffic and conversion potential.",
+        "includes": [
+          "Advantage Portal",
+          "Data management",
+          "Footfall",
+          "Portfolio-wide report",
+          "Sensor management",
+          "Remote support",
+          "Conversion rate"
+        ]
+      },
+      "reasoning": [
+        {
+          "need_id": "baseline_missing",
+          "need": "We do not have a trusted performance baseline",
+          "route_weight": "essential"
+        },
+        {
+          "need_id": "visitors_not_buying",
+          "need": "We have visitors, but not enough buyers",
+          "route_weight": "essential"
+        }
+      ]
+    },
+    "concept_quote": {
+      "company_name": "Example Retailer",
+      "contact_name": "Jane Doe",
+      "contact_email": "jane@example.com",
+      "country": "Netherlands",
+      "customer_type": "Retail Chain",
+      "stores": 50,
+      "recommended_route": "Essential",
+      "capex_total": 75000.0,
+      "monthly_service_total": 1050.0,
+      "tco_total": 112800.0,
+      "realistic_extra_profit_year_total": 1048320.0,
+      "payback_months": 0.9,
+      "roi_pct_over_horizon": 2688.1
+    },
+    "mock_odoo_payload": {
+      "environment": "mock_only",
+      "action": "preview_concept_quote_payload",
+      "do_not_write_to_production_odoo": true,
+      "operating_unit": {
+        "mock_id": "OU_SHOPS_TEST",
+        "label": "Shops"
+      },
+      "opportunity_type": {
+        "mock_id": "OPP_CONCEPT_TEST"
+      },
+      "quote_template_key": "MOCK_TEMPLATE_RETAIL_ESSENTIAL",
+      "salesperson_name": "Christiaan van Rooijen",
+      "customer": {
+        "company_name": "Example Retailer",
+        "contact_name": "Jane Doe",
+        "contact_email": "jane@example.com",
+        "country": "Netherlands"
+      },
+      "quote_lines_preview": [
+        {
+          "component_key": "entrance_performance",
+          "label": "Entrance Performance Layer",
+          "units": 50,
+          "scope": 50,
+          "capex_total": 75000,
+          "monthly_total": 1050,
+          "one_off_total": 0,
+          "tco_total": 112800,
+          "pricing_status": "demo_assumption",
+          "privacy_review_required": false
+        }
+      ],
+      "commercial_totals": {
+        "capex_total": 75000,
+        "monthly_total": 1050,
+        "one_off_total": 0,
+        "tco_total": 112800
+      },
+      "human_review_required": true
+    },
+    "review": {
+      "human_review_required": true,
+      "checks": {
+        "customer_details_checked": false,
+        "scope_checked": false,
+        "pricing_assumptions_checked": false,
+        "country_entity_checked": false,
+        "route_reviewed": false,
+        "privacy_sensitive_modules_checked": false,
+        "sales_owner_approved": false
+      },
+      "ready_for_internal_review": false
+    }
+  }
+}
